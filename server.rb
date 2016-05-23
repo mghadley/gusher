@@ -27,19 +27,19 @@ $current_user = ''
 $users << @beyonce
 
 @obama = User.new("Obama", "obama@potus.com", "password", {Time.now => "Hangin with my girl Beyonce", Time.now => "Dang it Joe what are you doing",
-									"Can't wait to move out of this dump."})
+									Time.now => "Can't wait to move out of this dump."})
 $users << @obama
 
 @jakesorce = User.new("SorcenCode", "jakes@ridingthegnar.com", "password",
-					["Code4life", "Shreddin' the fresh pow", "Need a nap 
-						right MEOWWW", "Beer or Break"])
-$users << @SorcenCode
+					{"Code4life", "Shreddin' the fresh pow", "Need a nap 
+						right MEOWWW", "Beer or Break"})
+$users << @jakesorce
 
 @michaeljackson = User.new("MJ", "neverneverland@aol.com", "password",
-					["Gushing from the other-side", "yeeehooo", 
+					{"Gushing from the other-side", "yeeehooo", 
 						"moon-walking through the silver-lined clouds", 
-						"keeping it classy in the heavens: white socks & black loafers4EVAH" ])
-$users << @hiimmichael 
+						"keeping it classy in the heavens: white socks & black loafers4EVAH"})
+$users << @michaeljackson
 
 get '/' do
 	redirect to ('/sign_up') if $current_user == ''
@@ -53,6 +53,9 @@ end
 get '/log_in' do
 	erb :log_in
 end
+
+# profile page
+# validate blank user login
 
 post '/sign_up' do
 	@user = User.new(params[:username], params[:email], params[:password])
