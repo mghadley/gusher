@@ -16,7 +16,6 @@ end
 $users = []
 $current_user = ''
 
-
 get '/' do
 	binding.pry
 end
