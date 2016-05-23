@@ -62,6 +62,9 @@ get '/log_in' do
 	erb :log_in
 end
 
+# profile page
+# validate blank user login
+
 post '/sign_up' do
 	@user = User.new(params[:username], params[:email], params[:password])
 	@user.following << @user
