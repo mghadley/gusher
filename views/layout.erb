@@ -4,6 +4,7 @@
 		<!-- link to stylesheet -->
 	</head>
 	<body>
+		<%= erb :_header if $current_user != '' %>
 		<%= yield %>
 	</body>
 </html>

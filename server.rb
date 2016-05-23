@@ -17,10 +17,14 @@ class User
 			@id = $users.last.id + 1
 		end
 	end
-end 
+end
 
 $users = []
 $current_user = ''
+
+@beyonce = User.new("Beyonce", "beyonce@queenb.com", "password", 
+	                 ["Gusher is so great omg", "Cruisin on my yacht", "Becky with the good hair"])
+$users << @beyonce
 
 get '/' do
 	redirect to ('/sign_up') if $current_user == ''
@@ -32,10 +36,8 @@ get '/sign_up' do
 end
 
 get '/log_in' do
-
+	erb :log_in
 end
-
-
 
 post '/sign_up' do
 	binding.pry
@@ -43,6 +45,11 @@ post '/sign_up' do
 	$users << @user
 	$current_user = @user
 	binding.pry
+end
+
+post '/log_out' do
+	$current_user = ''
+	redirect to ('/sign_up')
 end
 
 
