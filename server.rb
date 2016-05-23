@@ -30,6 +30,17 @@ $users << @beyonce
 									"Can't wait to move out of this dump."})
 $users << @obama
 
+@jakesorce = User.new("SorcenCode", "jakes@ridingthegnar.com", "password",
+					["Code4life", "Shreddin' the fresh pow", "Need a nap 
+						right MEOWWW", "Beer or Break"])
+$users << @SorcenCode
+
+@michaeljackson = User.new("MJ", "neverneverland@aol.com", "password",
+					["Gushing from the other-side", "yeeehooo", 
+						"moon-walking through the silver-lined clouds", 
+						"keeping it classy in the heavens: white socks & black loafers4EVAH" ])
+$users << @hiimmichael 
+
 get '/' do
 	redirect to ('/sign_up') if $current_user == ''
 	erb :home
