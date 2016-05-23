@@ -13,9 +13,7 @@ class User
 	end
 end 
 
-class Post
 
-end
 
 get '/' do
 	$users = [] if @users.nil?
