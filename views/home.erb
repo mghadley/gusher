@@ -6,11 +6,9 @@
 </div>
 
 <section>
-	<h2>Gush Feed</h2>
-	<% $current_user.following.each do |followee| %>
-		<% followee.posts.each do |post| %>
-			<%= post %>
-		<% end %>
+	<h2>Your Gush Feed</h2>
+	<% @all_gushes.each do |time, gush| %>
+		<%= gush %>
 	<% end %>
 </section>
 
@@ -19,7 +17,7 @@
 	<% $users.each do |user| %>
 		<div class='post'>
 			<h4><%= user.username if user != $current_user%></h4>
-			<%= user.posts.sample if user != $current_user %>
+			<%= user.posts.to_a.sample[1] if user != $current_user %>
 		</div>
 	<% end %>
 </section>
