@@ -2,5 +2,20 @@
 <p>A place where you can gush your heart out.</p>
 
 <section>
-	
+	<% $current_user.following.each do |followee| %>
+		<% followee.posts.each do |post| %>
+			<%= post %>
+		<% end %>
+	<% end %>
 </section>
+
+<section>
+	<h2>Suggested Gushes</h2>
+	<% $users.each do |user| %>
+		<div class='post'>
+			<h4><%= user.username if user != $current_user%></h4>
+			<%= user.posts.sample if user != $current_user %>
+		</div>
+	<% end %>
+</section>
+

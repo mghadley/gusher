@@ -26,6 +26,10 @@ $current_user = ''
 	                 ["Gusher is so great omg", "Cruisin on my yacht", "Becky with the good hair"])
 $users << @beyonce
 
+@obama = User.new("Obama", "obama@potus.com", "password", ["Hangin with my girl Beyonce", "Dang it Joe what are you doing",
+									"Can't wait to move out of this dump."])
+$users << @obama
+
 get '/' do
 	redirect to ('/sign_up') if $current_user == ''
 	erb :home
