@@ -50,7 +50,7 @@ get '/' do
 			@all_gushes[time] = post
 		end
 	end
-
+	@all_gushes = @all_gushes.sort.to_h
 	erb :home
 end
 
