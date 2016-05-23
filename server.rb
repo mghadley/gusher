@@ -38,11 +38,10 @@ end
 
 
 post '/sign_up' do
-	binding.pry
 	@user = User.new(params[:username], params[:email], params[:password])
 	$users << @user
 	$current_user = @user
-	binding.pry
+	redirect to ('/')
 end
 
 
