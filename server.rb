@@ -3,7 +3,7 @@ require 'pry'
 
 
 class User
-	attr_accessor :name, :posts
+	attr_accessor :username, :email, :posts, :following
 
 	def initialize(username, email, posts = [], following = [])
 		@username = username
@@ -13,12 +13,11 @@ class User
 	end
 end 
 
-class Post
+$users = []
+$current_user = ''
 
-end
 
 get '/' do
-	$users = [] if @users.nil?
 	binding.pry
 end
 
@@ -30,6 +29,9 @@ post '/sign_up' do
 	binding.pry
 	@user = User.new(params[:username], params[:email])
 	$users << @user
+	$current_user = @user
 	binding.pry
 end
+
+post
 
