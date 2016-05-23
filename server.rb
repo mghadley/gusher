@@ -43,6 +43,14 @@ $users << @michaeljackson
 
 get '/' do
 	redirect to ('/sign_up') if $current_user == ''
+
+	@all_gushes = {}
+	$current_user.following.each do |followee|
+		followee.posts.each do |time, post|
+			@all_gushes[time] = post
+		end
+	end
+
 	erb :home
 end
 
