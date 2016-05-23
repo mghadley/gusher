@@ -6,17 +6,10 @@ class User
 	attr_accessor :name, :posts
 
 	def initialize(username, email, posts = [], following = [])
-		if @users.empty?
-			@id = 1
-		else
-			@id = @users.values.last + 1
-		end
 		@username = username
 		@email = email
-	end
-
-	def save
-		@users << @user
+		@posts = posts
+		@following = following
 	end
 end 
 
@@ -25,7 +18,7 @@ class Post
 end
 
 get '/' do
-	@users = [] if @users.nil?
+	$users = [] if @users.nil?
 	binding.pry
 end
 
@@ -34,8 +27,9 @@ get '/sign_up' do
 end
 
 post '/sign_up' do
+	binding.pry
 	@user = User.new(params[:username], params[:email])
-	@user.save
+	$users << @user
 	binding.pry
 end
 
