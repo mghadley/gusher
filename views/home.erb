@@ -6,11 +6,9 @@
 </div>
 
 <section>
-	<h2>Gush Feed</h2>
-	<% $current_user.following.each do |followee| %>
-		<% followee.posts.each do |post| %>
-			<%= post %>
-		<% end %>
+	<h2>Your Gush Feed</h2>
+	<% @all_gushes.each do |time, gush| %>
+		<%= gush %>
 	<% end %>
 </section>
 
