@@ -3,8 +3,17 @@ html {
 	background: linear-gradient(#919191, #3dab89);
 }
 header h1 {
-	font-weight: 900;
+	text-align: left;
+}
+div {
+	text-align: center;
 }
 h1 {
+	text-align: center;
+}
+p {
+	text-align: center;
+}
+section {
 	text-align: center;
 }
