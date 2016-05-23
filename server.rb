@@ -34,7 +34,7 @@ $users << @obama
 @jakesorce = User.new("SorcenCode", "jakes@ridingthegnar.com", "password",
 					["Code4life", "Shreddin' the fresh pow", "Need a nap 
 						right MEOWWW", "Beer or Break"])
-$users << @SorcenCode
+$users << @jakesorce
 
 @michaeljackson = User.new("MJ", "neverneverland@aol.com", "password",
 					["Gushing from the other-side", "yeeehooo", 
