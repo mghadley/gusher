@@ -27,7 +27,7 @@ $current_user = ''
 $users << @beyonce
 
 @obama = User.new("Obama", "obama@potus.com", "password", {Time.now => "Hangin with my girl Beyonce", Time.now => "Dang it Joe what are you doing",
-									"Can't wait to move out of this dump."})
+									Time.now =>"Can't wait to move out of this dump."})
 $users << @obama
 
 @jakesorce = User.new("SorcenCode", "jakes@ridingthegnar.com", "password",
@@ -39,12 +39,16 @@ $users << @jakesorce
 					["Gushing from the other-side", "yeeehooo", 
 						"moon-walking through the silver-lined clouds", 
 						"keeping it classy in the heavens: white socks & black loafers4EVAH" ])
-$users << @hiimmichael 
+$users << @michaeljackson 
 
 get '/' do
 	redirect to ('/sign_up') if $current_user == ''
 	erb :home
 end
+
+get '/profile' do
+	erb :profile
+end 
 
 get '/sign_up' do
 	erb :sign_up
