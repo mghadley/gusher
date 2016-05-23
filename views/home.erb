@@ -1,6 +1,10 @@
 <h1>Welcome, <%= $current_user.username %>!</h1>
 <p>A place where you can gush your heart out.</p>
 
+<div>
+	<%= erb :_post %>
+</div>
+
 <section>
 	<h2>Gush Feed</h2>
 	<% $current_user.following.each do |followee| %>
