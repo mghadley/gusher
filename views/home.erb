@@ -19,7 +19,7 @@
 	<% $users.each do |user| %>
 		<div class='post'>
 			<h4><%= user.username if user != $current_user%></h4>
-			<%= user.posts.sample if user != $current_user %>
+			<%= user.posts.to_a.sample[1] if user != $current_user %>
 		</div>
 	<% end %>
 </section>

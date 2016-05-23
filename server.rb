@@ -23,23 +23,23 @@ $users = []
 $current_user = ''
 
 @beyonce = User.new("Beyonce", "beyonce@queenb.com", "password", 
-	                 {Time.now => "Gusher is so great omg", Time.now => "Cruisin on my yacht", Time.now =>"Becky with the good hair"})
+	                 {Time.now.usec => "Gusher is so great omg", Time.now.usec => "Cruisin on my yacht", Time.now.usec =>"Becky with the good hair"})
 $users << @beyonce
 
-@obama = User.new("Obama", "obama@potus.com", "password", {Time.now => "Hangin with my girl Beyonce", Time.now => "Dang it Joe what are you doing",
-									"Can't wait to move out of this dump."})
+@obama = User.new("Obama", "obama@potus.com", "password", {Time.now.usec => "Hangin with my girl Beyonce", Time.now.usec => "Dang it Joe what are you doing",
+									Time.now.usec => "Can't wait to move out of this dump."})
 $users << @obama
 
 @jakesorce = User.new("SorcenCode", "jakes@ridingthegnar.com", "password",
-					["Code4life", "Shreddin' the fresh pow", "Need a nap 
-						right MEOWWW", "Beer or Break"])
-$users << @SorcenCode
+					{Time.now.usec => "Code4life", Time.now.usec => "Shreddin' the fresh pow", Time.now.usec => "Need a nap 
+						right MEOWWW", Time.now.usec => "Beer or Break"})
+$users << @jakesorce
 
 @michaeljackson = User.new("MJ", "neverneverland@aol.com", "password",
-					["Gushing from the other-side", "yeeehooo", 
-						"moon-walking through the silver-lined clouds", 
-						"keeping it classy in the heavens: white socks & black loafers4EVAH" ])
-$users << @hiimmichael 
+					{ Time.now.usec => "Gushing from the other-side",  Time.now.usec => "yeeehooo", 
+						 Time.now.usec => "moon-walking through the silver-lined clouds", 
+						 Time.now.usec => "keeping it classy in the heavens: white socks & black loafers4EVAH" })
+$users << @michaeljackson 
 
 get '/' do
 	redirect to ('/sign_up') if $current_user == ''
@@ -78,7 +78,7 @@ post '/log_out' do
 end
 
 post '/new_post' do
-	$current_user.posts << params[:gush]
+	$current_user.posts[Time.now.usec] = params[:gush]
 	binding.pry
 	redirect to ('/')
 end
