@@ -1,3 +1,8 @@
 html {
-	
+	font-family: 'Monserrat', sans-serif;
+	background: linear-gradient(#a6a6a6, #3dab89);
+}
+header h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
 }
