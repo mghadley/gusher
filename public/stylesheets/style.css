@@ -11,13 +11,15 @@ body {
 /* ============= */
 
 header {
-	background-color: #317256;
+	background-color: #B24030;
 	height: 80px;
+	text-shadow: 3px 3px 5px #A9C425;
 }
 header h1 {
 	text-align: left;
 	display: inline-block;
-	margin-left: 30px;
+	margin: 9px 0 0 30px;
+	font-size: 50px;
 }
 header ul {
 	list-style-type: none;
@@ -27,17 +29,21 @@ header ul {
 header .nav {
 	float: right;
 	display: inline-block;
+	text-shadow: none;
 }
 header .nav-link {
 	display: inline-block;
 	margin: 0 15px 0 0;
 	float: left;
-	margin-top: 32px;
+	margin-top: 27px;
+	font-size: 22px;
 }
 header .nav-link form input[type=submit]{
 	background-color: #A9C425;
 	border: none;
 	font-size: 16px;
+	font-family: Chewy;
+
 }
 
 header .nav-link a, header .navlink a:visited {
@@ -60,6 +66,7 @@ div {
 	border: 1px solid #FFFFFF;
 	border-radius: 7px;
 	width: 275px;
+	font-size: 18px;
 }
 
 a:link    { color: #FFFFF7 }

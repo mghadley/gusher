@@ -9,7 +9,7 @@
 	<h2>Your Gush Feed</h2>
 	<% @all_gushes.each do |time, hash| %>
 		<div class='gush'> 
-			<h3><%= hash.keys.join %></h3>
+			<h3><%= hash.keys.join %> Gushed</h3>
 			<%= hash.values.join %>
 		</div>
 		<br />
@@ -21,7 +21,7 @@
 	<% $users.each do |user| %>
 		<% if user != $current_user && user.posts.any? %>
 			<div class='gush'>
-				<h4><%= user.username %></h4>
+				<h4><%= user.username %> Gushed</h4>
 				<%= user.posts.to_a.sample[1] %>
 				<% unless $current_user.following.include?(user) %>
 					<form action="/follow" method="post">
