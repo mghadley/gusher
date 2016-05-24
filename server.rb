@@ -38,7 +38,7 @@ $users << @jakesorce
 @michaeljackson = User.new("MJ", "neverneverland@aol.com", "password",
 					{ Time.now.usec => "Gushing from the other-side",  Time.now.usec => "yeeehooo", 
 						 Time.now.usec => "moon-walking through the silver-lined clouds", 
-						 Time.now.usec => "keeping it classy in the heavens: white socks & black loafers4EVAH" })
+						 Time.now.usec => "ivory socks and ebony loafers" })
 $users << @michaeljackson 
 
 get '/' do
