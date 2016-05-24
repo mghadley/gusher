@@ -19,16 +19,18 @@
 <section>
 	<h2>Suggested Gushes</h2>
 	<% $users.each do |user| %>
-		<div class='gush'>
-			<h4><%= user.username if user != $current_user && user.posts.any? %></h4>
-			<%= user.posts.to_a.sample[1] if user != $current_user && user.posts.any? %>
-			<% if user != $current_user && user.posts.any? %>
-				<form action="/follow" method="post">
-					<input type="hidden" name="user" value=<%= user.username %>>
-					<input type="submit" value="Follow this Gusher">
-				</form>
-			<% end %>
-		</div>
+		<% if user != $current_user && user.posts.any? %>
+			<div class='gush'>
+				<h4><%= user.username %></h4>
+				<%= user.posts.to_a.sample[1] %>
+				<% unless $current_user.following.include?(user) %>
+					<form action="/follow" method="post">
+						<input type="hidden" name="user" value=<%= user.username %>>
+						<input type="submit" value="Follow this Gusher">
+					</form>
+				<% end %>
+			</div>
+		<% end %>
 		<br />
 	<% end %>
 </section>
