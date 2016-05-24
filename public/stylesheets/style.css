@@ -43,7 +43,7 @@ header .nav-link form input[type=submit]{
 	border: none;
 	font-size: 16px;
 	font-family: Chewy;
-
+	border-radius: 5px;
 }
 
 header .nav-link a, header .navlink a:visited {
@@ -67,6 +67,13 @@ div {
 	border-radius: 7px;
 	width: 275px;
 	font-size: 18px;
+}
+input[type=submit]{
+	font-family: Chewy;
+	font-size: 16px;
+	border: none;
+	background-color: #A9C425;
+	border-radius: 5px;
 }
 
 a:link    { color: #FFFFF7 }
