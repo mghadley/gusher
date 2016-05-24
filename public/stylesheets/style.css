@@ -11,8 +11,9 @@ body {
 /* ============= */
 
 header {
-	background-color: #317256;
+	background-color: #B24030;
 	height: 80px;
+	text-shadow: 3px 3px 5px #A9C425;
 }
 header h1 {
 	text-align: left;
@@ -28,6 +29,7 @@ header ul {
 header .nav {
 	float: right;
 	display: inline-block;
+	text-shadow: none;
 }
 header .nav-link {
 	display: inline-block;
@@ -40,6 +42,8 @@ header .nav-link form input[type=submit]{
 	background-color: #A9C425;
 	border: none;
 	font-size: 16px;
+	font-family: Chewy;
+
 }
 
 header .nav-link a, header .navlink a:visited {
