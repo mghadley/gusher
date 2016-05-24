@@ -66,15 +66,18 @@ get '/log_in' do
 	erb :log_in
 end
 
-# profile page
 # validate blank user login
 
 post '/sign_up' do
-	@user = User.new(params[:username], params[:email], params[:password])
-	@user.following << @user
-	$users << @user
-	$current_user = @user
-	redirect to ('/')
+	if params[:username].empty? || params[:email].empty? || params[:password].empty?
+		erb :sign_up_error
+	else
+		@user = User.new(params[:username], params[:email], params[:password])
+		@user.following << @user
+		$users << @user
+		$current_user = @user
+		redirect to ('/')
+	end
 end
 
 post '/log_in' do
@@ -94,7 +97,6 @@ end
 
 post '/new_post' do
 	$current_user.posts[Time.now.usec] = params[:gush]
-	binding.pry
 	redirect to ('/')
 end
 
@@ -104,4 +106,7 @@ post '/follow' do
 	redirect to ('/')
 end
 
-
+not_found do
+	status 404
+	'not found'
+end
