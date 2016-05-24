@@ -15,8 +15,7 @@ $users << @beyonce
 $users << @obama
 
 @jakesorce = User.new("Jake Sorce", "jakes@ridingthegnar.com", "password",
-					{Time.now.usec => "Code4life", Time.now.usec => "Shreddin' the fresh pow", Time.now.usec => "Need a nap 
-						right MEOWWW", Time.now.usec => "Beer or Break"})
+					{Time.now.usec => "Code4life", Time.now.usec => "Shreddin' the fresh pow", Time.now.usec => "Need a nap right MEOWWW", Time.now.usec => "Beer or Break"})
 $users << @jakesorce
 
 @michaeljackson = User.new("MJ", "neverneverland@aol.com", "password",
