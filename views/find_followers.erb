@@ -4,7 +4,7 @@
 		<% unless user == $current_user || $current_user.following.include?(user)%>
 			<%= user.username %>
 			<form action="/follow" method="post">
-				<input type="hidden" name="user" value=<%= user.username %>>
+				<input type="hidden" name="user" value=<%= user.id %>>
 				<input type="submit" value="Follow this Gusher">
 			</form>
 		<% end %>

@@ -27,7 +27,7 @@ $users << @michaeljackson
 
 get '/' do
 	redirect to ('/sign_up') if $current_user == ''
-
+	binding.pry
 	@all_gushes = {}
 	$current_user.following.each do |followee|
 		followee.posts.each do |time, post|
@@ -87,8 +87,10 @@ post '/new_post' do
 end
 
 post '/follow' do
-	user_to_follow = $users.find {|user| user.username == params[:user]}
+	binding.pry
+	user_to_follow = $users.find {|user| user.id == params[:user].to_i}
 	$current_user.following << user_to_follow
+	binding.pry
 	redirect to ('/')
 end
 

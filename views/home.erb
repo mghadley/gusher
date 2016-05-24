@@ -25,7 +25,7 @@
 				<%= user.posts.to_a.sample[1] %>
 				<% unless $current_user.following.include?(user) %>
 					<form action="/follow" method="post">
-						<input type="hidden" name="user" value=<%= user.username %>>
+						<input type="hidden" name="user" value=<%= user.id %>>
 						<input type="submit" value="Follow this Gusher">
 					</form>
 				<% end %>
