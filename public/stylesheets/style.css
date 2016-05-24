@@ -27,22 +27,30 @@ header ul {
 header .nav {
 	float: right;
 	display: inline-block;
+
+
 }
 header .nav-link {
 	display: inline-block;
 	margin: 0 15px 0 0;
 	float: left;
 	margin-top: 32px;
+
 }
 header .nav-link form input[type=submit]{
-	background-color: #FFC425;
+	background-color: #B24030;
 	border: none;
 	font-size: 16px;
+	font-family: 'Chewy';
+	color: white;
+	box-shadow: 2px 2px 8px #333333;
 }
 
 header .nav-link a, header .navlink a:visited {
 	text-decoration: none;
-	color: #FFC425;
+	color: #B24030;
+	text-shadow: 2px 2px 8px #FFFFFF;
+
 } 
 
 /* ============= */
@@ -92,6 +100,7 @@ h3.form {
 
 .form label {
 	padding-right: 20px;
+
 }
 
 
