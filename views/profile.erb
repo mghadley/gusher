@@ -14,7 +14,7 @@
 
 <section>
 	<h2>Your Gushes</h2>
-	<% $current_user.each do |gushes| %>
-		<%= gushes.current_user %>
+	<% $current_user.posts.each do |gushes| %>
+		<%= gushes.posts %>
 	<% end %>
 </section>
