@@ -1,23 +1,7 @@
 require 'sinatra'
 require 'pry'
 
-
-class User
-	attr_accessor :username, :email, :password, :posts, :following, :id
-
-	def initialize(username, email, password, posts = {}, following = [])
-		@username = username
-		@email = email
-		@password = password
-		@posts = posts
-		@following = following
-		if $users.empty?
-			@id = 1
-		else
-			@id = $users.last.id + 1
-		end
-	end
-end
+require_relative 'lib/user.rb'
 
 $users = []
 $current_user = ''
@@ -27,7 +11,7 @@ $current_user = ''
 $users << @beyonce
 
 @obama = User.new("Obama", "obama@potus.com", "password", {Time.now.usec => "Hangin with my girl Beyonce", Time.now.usec => "Dang it Joe what are you doing",
-									Time.now.usec => "Can't wait to move out of this dump."})
+									Time.now.usec => "Can't wait to move out of this dump.", Time.now.usec => "Who is Becky with the good hari??"})
 $users << @obama
 
 @jakesorce = User.new("Jake_Sorce", "jakes@ridingthegnar.com", "password",
@@ -37,12 +21,17 @@ $users << @jakesorce
 @michaeljackson = User.new("MJ", "neverneverland@aol.com", "password",
 					{ Time.now.usec => "Gushing from the other-side",  Time.now.usec => "yeeehooo", 
 						 Time.now.usec => "moon-walking through the silver-lined clouds", 
-						 Time.now.usec => "ivory socks and ebony loafers" })
-$users << @michaeljackson 
+						 Time.now.usec => "ivory socks and ebony loafers"})
+$users << @michaeljackson
+
+@davejungst = User.new("Dave Jungst", "dave@yoga.com", "password",
+					{ Time.now.usec => "I prefer to be called DJ", Time.now.usec => "Working on developing my yoga app",
+						Time.now.usec => "I am impressed by Gush everyday", Time.now.usec => "Just gushing about my yoga",
+						Time.now.usec => "Hot yoga is the best way to warm up from a freezing classroom"})
+$users << @davejungst
 
 get '/' do
 	redirect to ('/sign_up') if $current_user == ''
-
 	@all_gushes = {}
 	$current_user.following.each do |followee|
 		followee.posts.each do |time, post|
@@ -102,7 +91,7 @@ post '/new_post' do
 end
 
 post '/follow' do
-	user_to_follow = $users.find {|user| user.username == params[:user]}
+	user_to_follow = $users.find {|user| user.id == params[:user].to_i}
 	$current_user.following << user_to_follow
 	redirect to ('/')
 end

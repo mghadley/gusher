@@ -1,6 +1,6 @@
 body {
 	font-family: 'Chewy';
-	background: linear-gradient(#919191, #3dab89);
+	background: linear-gradient(#919191, #3DAB89);
 	color: white;
 	text-shadow: 2px 2px 8px #FF6119;
 	margin: 0;
@@ -27,30 +27,22 @@ header ul {
 header .nav {
 	float: right;
 	display: inline-block;
-
-
 }
 header .nav-link {
 	display: inline-block;
 	margin: 0 15px 0 0;
 	float: left;
 	margin-top: 32px;
-
 }
 header .nav-link form input[type=submit]{
-	background-color: #B24030;
+	background-color: #A9C425;
 	border: none;
 	font-size: 16px;
-	font-family: 'Chewy';
-	color: white;
-	box-shadow: 2px 2px 8px #333333;
 }
 
 header .nav-link a, header .navlink a:visited {
 	text-decoration: none;
-	color: #B24030;
-	text-shadow: 2px 2px 8px #FFFFFF;
-
+	color: #A9C425;
 } 
 
 /* ============= */
@@ -65,7 +57,7 @@ div {
 .gush {
 	margin-left: auto;
 	margin-right: auto;
-	border: 1px solid #ffffff;
+	border: 1px solid #FFFFFF;
 	border-radius: 7px;
 	width: 275px;
 }
@@ -84,7 +76,7 @@ section {
 }
 
 /* ============= */
-/*    SIGN UP    */
+/*     FORMS     */
 /* ============= */
 
 .form {
@@ -100,9 +92,21 @@ h3.form {
 
 .form label {
 	padding-right: 20px;
-
 }
 
+textarea {
+	width: 300px;
+	height: 100px;
+	font-size: 20px;
+	border: none;
+	border-radius: 10px;
+}
+	
+textarea:focus {
+	outline: none;
+	border: solid 5px #D8F330;
+	border-radius: 10px;
+}
 
 
 
