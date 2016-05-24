@@ -1,11 +1,12 @@
 <h1>Select Whoever You Would Like to Follow</h1>
-
-<% $users.each do |user| %>
-	<% unless user == $current_user || $current_user.following.include?(user)%>
-		<%= user.username %>
-		<form action="/follow" method="post">
-			<input type="hidden" name="user" value=<%= user.username %>>
-			<input type="submit" value="Follow this Gusher">
-		</form>
+<div>
+	<% $users.each do |user| %>
+		<% unless user == $current_user || $current_user.following.include?(user)%>
+			<%= user.username %>
+			<form action="/follow" method="post">
+				<input type="hidden" name="user" value=<%= user.username %>>
+				<input type="submit" value="Follow this Gusher">
+			</form>
+		<% end %>
 	<% end %>
-<% end %>
+</div>

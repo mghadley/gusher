@@ -9,10 +9,10 @@
 	<h2>Your Gush Feed</h2>
 	<% @all_gushes.each do |time, hash| %>
 		<div class='gush'> 
-		<!-- add border around gushes here -->
 			<h3><%= hash.keys.join %></h3>
 			<%= hash.values.join %>
 		</div>
+		<br />
 	<% end %>
 </section>
 

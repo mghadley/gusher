@@ -1,6 +1,6 @@
 body {
 	font-family: 'Chewy';
-	background: linear-gradient(#919191, #3dab89);
+	background: linear-gradient(#919191, #3DAB89);
 	color: white;
 	text-shadow: 2px 2px 8px #FF6119;
 	margin: 0;
@@ -35,14 +35,14 @@ header .nav-link {
 	margin-top: 32px;
 }
 header .nav-link form input[type=submit]{
-	background-color: #FFC425;
+	background-color: #A9C425;
 	border: none;
 	font-size: 16px;
 }
 
 header .nav-link a, header .navlink a:visited {
 	text-decoration: none;
-	color: #FFC425;
+	color: #A9C425;
 } 
 
 /* ============= */
@@ -57,7 +57,7 @@ div {
 .gush {
 	margin-left: auto;
 	margin-right: auto;
-	border: 1px solid #ffffff;
+	border: 1px solid #FFFFFF;
 	border-radius: 7px;
 	width: 275px;
 }
