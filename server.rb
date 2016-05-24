@@ -66,7 +66,9 @@ get '/log_in' do
 	erb :log_in
 end
 
-# profile page
+get '/find_followers' do
+	erb :find_followers
+end
 # validate blank user login
 
 post '/sign_up' do
@@ -94,7 +96,6 @@ end
 
 post '/new_post' do
 	$current_user.posts[Time.now.usec] = params[:gush]
-	binding.pry
 	redirect to ('/')
 end
 
