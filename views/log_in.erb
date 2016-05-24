@@ -1,10 +1,16 @@
 <h1>Log In</h1>
-<form action='log_in' method='post'>
-	<label>Username:</label>
-	<input type='text' name='username'>
-	<br />
-	<label>Password:</label>
-	<input type='password' name='password'>
-	<br />
+<form action='log_in' method='post' class='form'>
+	<table>
+		<tr>
+			<td><label>Username</label></td>
+			<td><input type='text' name='username'></td>
+		</tr>
+		<tr>
+			<td><label>Password</label></td>
+			<td><input type='password' name='password'></td>
+		</tr>
+	</table>
 	<input type='submit'>
 </form>
+
+<h3 class='form'> Or, <a href="/sign_up">sign up</a></h3>

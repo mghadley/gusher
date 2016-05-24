@@ -1,13 +1,59 @@
-html {
-	font-family: 'Noto Sans', sans-serif;
+body {
+	font-family: 'Chewy';
 	background: linear-gradient(#919191, #3dab89);
+	color: white;
+	text-shadow: 2px 2px 8px #FF6119;
+	margin: 0;
+}
+
+/* ============= */
+/*    HEADER     */
+/* ============= */
+
+header {
+	background-color: #317256;
+	height: 80px;
 }
 header h1 {
 	text-align: left;
+	display: inline-block;
+	margin-left: 30px;
 }
+header ul {
+	list-style-type: none;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+header .nav {
+	float: right;
+	display: inline-block;
+}
+header .nav-link {
+	display: inline-block;
+	margin: 0 15px 0 0;
+	float: left;
+	margin-top: 32px;
+}
+header .nav-link form input[type=submit]{
+	background-color: #FFC425;
+	border: none;
+	font-size: 16px;
+}
+
+header .nav-link a, header .navlink a:visited {
+	text-decoration: none;
+	color: #FFC425;
+} 
+
+/* ============= */
+/*    GENERAL    */
+/* ============= */
+
+
 div {
 	text-align: center;
 }
+
 .gush {
 	margin-left: auto;
 	margin-right: auto;
@@ -15,6 +61,10 @@ div {
 	border-radius: 7px;
 	width: 275px;
 }
+
+a:link    { color: #FFFFF7 }
+a:visited { color: #B24030 }
+
 h1 {
 	text-align: center;
 }
@@ -24,3 +74,27 @@ p {
 section {
 	text-align: center;
 }
+
+/* ============= */
+/*    SIGN UP    */
+/* ============= */
+
+.form {
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;	
+	text-align: center;
+}
+
+h3.form {
+	margin-top: 50px;
+}
+
+.form label {
+	padding-right: 20px;
+}
+
+
+
+
+
