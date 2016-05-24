@@ -11,7 +11,7 @@ $current_user = ''
 $users << @beyonce
 
 @obama = User.new("Obama", "obama@potus.com", "password", {Time.now.usec => "Hangin with my girl Beyonce", Time.now.usec => "Dang it Joe what are you doing",
-									Time.now.usec => "Can't wait to move out of this dump.", Time.now.usec => "Who is Becky with the good hari??"})
+									Time.now.usec => "Can't wait to move out of this dump.", Time.now.usec => "Who is Becky with the good hair??"})
 $users << @obama
 
 @jakesorce = User.new("Jake Sorce", "jakes@ridingthegnar.com", "password",
