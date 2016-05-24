@@ -66,7 +66,9 @@ get '/log_in' do
 	erb :log_in
 end
 
-# validate blank user login
+get '/find_followers' do
+	erb :find_followers
+end
 
 post '/sign_up' do
 	if params[:username].empty? || params[:email].empty? || params[:password].empty?
