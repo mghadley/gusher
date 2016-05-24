@@ -2,9 +2,42 @@ html {
 	font-family: 'Noto Sans', sans-serif;
 	background: linear-gradient(#919191, #3dab89);
 }
+body {
+	margin: 0;
+}
+header {
+	background-color: #317256;
+	height: 80px;
+}
 header h1 {
 	text-align: left;
+	display: inline-block;
+	margin-left: 30px;
 }
+header ul {
+	list-style-type: none;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+header .nav {
+	float: right;
+	display: inline-block;
+}
+header .nav-link {
+	display: inline-block;
+	margin: 0 15px 0 0;
+	float: left;
+	margin-top: 32px;
+}
+header .nav-link form input[type=submit]{
+	background-color: #FFC425;
+	border: none;
+	font-size: 16px;
+}
+header .nav-link a, a:visited {
+	text-decoration: none;
+	color: #FFC425;
+} 
 div {
 	text-align: center;
 }

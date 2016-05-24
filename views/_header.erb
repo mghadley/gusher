@@ -1,12 +1,17 @@
 <h1>GUSHER</h1>
 
-<ul>
-	<div><li><a href="/"><div class="button">Home</div></a></li></div>
-	<div><li><a href="/find_users"><div class="button">Find Users</div></a></li></div>
-	<div><li><a href="/profile"><div class="button">My Profile</div></a></li></div>
-	<div><li><a href="/find_followers"><div class="button">Find People to Follow</div></a></li></div>
-</ul>
-
-<form action="/log_out" method="post">
-	<input type="submit" value="Log Out">
-</form>
+<div class='nav'>
+	<ul>
+		<div class='nav-link'><li><a href="/">Home</a></li></div>
+		<div class='nav-link'><li><a href="/find_users">Find Users</a></li></div>
+		<div class='nav-link'><li><a href="/profile">My Profile</a></li></div>
+		<div class='nav-link'><li><a href="/find_followers">Find People to Follow</a></li></div>
+		<div class='nav-link'>
+			<li>
+				<form action="/log_out" method="post">
+					<input type="submit" value="Log Out">
+				</form>
+			</li>
+		</div>
+	</ul>
+</div>
