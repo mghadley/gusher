@@ -65,8 +65,13 @@ div {
 	margin-right: auto;
 	border: 1px solid #FFFFFF;
 	border-radius: 7px;
-	width: 275px;
-	font-size: 18px;
+	width: 375px;
+	font-size: 28px;
+}
+
+.gush h4 {
+	font-size: 40;
+	margin: 20px 0 20px 0;
 }
 
 a:link    { color: #FFFFF7 }
@@ -115,6 +120,15 @@ textarea:focus {
 	border-radius: 10px;
 }
 
+h1.welcome {
+	font-size: 80px;
+}
 
+p.welcome {
+	font-size: 50px;
+}
 
+.feed {
+	font-size: 60px;
+}
 

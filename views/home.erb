@@ -1,15 +1,15 @@
-<h1>Welcome, <%= $current_user.username %>!</h1>
-<p>A place where you can gush your heart out.</p>
+<h1 class='welcome'>Welcome, <%= $current_user.username %>!</h1>
+<p class='welcome'>A place where you can gush your heart out.</p>
 
 <div>
 	<%= erb :_post %>
 </div>
 
 <section>
-	<h2>Your Gush Feed</h2>
+	<h2 class='feed'>Your Gush Feed</h2>
 	<% @all_gushes.each do |time, hash| %>
 		<div class='gush'> 
-			<h3><%= hash.keys.join %> Gushed</h3>
+			<h4><%= hash.keys.join %> Gushed</h4>
 			<%= hash.values.join %>
 		</div>
 		<br />
@@ -17,7 +17,7 @@
 </section>
 
 <section>
-	<h2>Suggested Gushes</h2>
+	<h2 class='feed'>Suggested Gushes</h2>
 	<% $users.each do |user| %>
 		<% if user != $current_user && user.posts.any? %>
 			<div class='gush'>
