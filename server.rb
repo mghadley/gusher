@@ -33,7 +33,6 @@ $users << @davejungst
 
 get '/' do
 	redirect to ('/sign_up') if $current_user == ''
-	# binding.pry
 	@all_gushes = {}
 	$current_user.following.each do |followee|
 		followee.posts.each do |time, post|
