@@ -30,7 +30,7 @@ $users << @beyonce
 									Time.now.usec => "Can't wait to move out of this dump."})
 $users << @obama
 
-@jakesorce = User.new("SorcenCode", "jakes@ridingthegnar.com", "password",
+@jakesorce = User.new("Jake Sorce", "jakes@ridingthegnar.com", "password",
 					{Time.now.usec => "Code4life", Time.now.usec => "Shreddin' the fresh pow", Time.now.usec => "Need a nap 
 						right MEOWWW", Time.now.usec => "Beer or Break"})
 $users << @jakesorce
@@ -89,7 +89,7 @@ end
 
 post '/log_out' do
 	$current_user = ''
-	redirect to ('/sign_up')
+	redirect to ('/log_in')
 end
 
 post '/new_post' do
