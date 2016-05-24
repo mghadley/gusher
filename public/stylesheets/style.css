@@ -5,6 +5,11 @@ html {
 body {
 	margin: 0;
 }
+
+/* ============= */
+/*    HEADER     */
+/* ============= */
+
 header {
 	background-color: #317256;
 	height: 80px;
@@ -38,6 +43,11 @@ header .nav-link a, a:visited {
 	text-decoration: none;
 	color: #FFC425;
 } 
+
+/* ============= */
+/*    GENERAL    */
+/* ============= */
+
 div {
 	text-align: center;
 }
