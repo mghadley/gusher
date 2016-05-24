@@ -47,7 +47,7 @@ get '/' do
 	@all_gushes = {}
 	$current_user.following.each do |followee|
 		followee.posts.each do |time, post|
-			@all_gushes[time] = post
+			@all_gushes[time] = {followee.username => post}
 		end
 	end
 	@all_gushes = @all_gushes.sort.to_h
@@ -89,12 +89,18 @@ end
 
 post '/log_out' do
 	$current_user = ''
-	redirect to ('/sign_up')
+	redirect to ('/log_in')
 end
 
 post '/new_post' do
 	$current_user.posts[Time.now.usec] = params[:gush]
 	binding.pry
+	redirect to ('/')
+end
+
+post '/follow' do
+	user_to_follow = $users.find {|user| user.username == params[:user]}
+	$current_user.following << user_to_follow
 	redirect to ('/')
 end
 

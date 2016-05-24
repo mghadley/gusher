@@ -8,6 +8,7 @@
 <section>
 	<h2>Your Gush Followers</h2>
 	<% $current_user.following.each do |followee| %>
+		<%= followee.username %>
 	<% end %>
 </section>
 
@@ -15,3 +16,9 @@
 
  <!-- current followers ; posts user has made -->
 
+<section>
+	<h2>Your Gushes</h2>
+	<% $current_user.each do |gushes| %>
+		<%= gushes.current_user %>
+	<% end %>
+</section>
